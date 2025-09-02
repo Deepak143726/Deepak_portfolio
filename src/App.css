@@ -59,7 +59,9 @@
   top: 0;
 }
 
-/* Outer Circle with Gradient */
+
+
+
 .home-img .img-box {
   position: relative;
   width: 25vw;
@@ -73,7 +75,7 @@
   overflow: hidden;
 }
 
-/* Gradient Ring */
+
 .home-img .img-box::before,
  .home-img .img-box::after{
   content: " ";
@@ -88,12 +90,12 @@
   z-index: -1;
 }
 
-/* Image Wrapper */
+
 .home-img .img-item {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #0a0a0a; /* You can change this */
+  background: #0b0b0b; 
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -101,21 +103,64 @@
   justify-content: center;
 }
 
-/* Image Styling */
+
 .home-img .img-item img {
   width: 90%;
   height: 100%;
   object-fit: cover;
   position: relative;
- image-resolution: 1080;
-  top: 10px;
-   image-rendering: auto; 
+
+  top: 20px;
+  mix-blend-mode:lighten;
+
 }
 .img-item{
-  image-rendering: auto;            /* Default */
-  image-rendering: crisp-edges;     /* For pixelated images */
+  image-rendering: auto;           
+  image-rendering: crisp-edges;     
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
+}
+#des{
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: .7px red;
+  overflow: hidden;
+  white-space: nowrap;
+ 
+font-weight: 500;
+  border-right: 2px solid red;
+  animation: typing 4s steps(14) forwards infinite , blink 0.7s step-end infinite ;
+ 
+}
+@keyframes typing {
+    0% {
+    width: 0;
+  }
+  75% {
+    width: 14ch;
+     -webkit-text-stroke-color:.7px red;
+  }
+  100% {
+    width: 14ch; /* Hold the full text for the last 1s */
+    -webkit-text-stroke-color:.7px red;
+  }
+  /* from {
+    width: 0;
+    
+  }
+  to {
+    width: 15ch;
+     
+     -webkit-text-stroke-color:.7px red;
+
+     
+    
+  } */
+} 
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes rotate {
@@ -126,6 +171,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 @media screen and (max-width: 1024px) {
   .home-img .img-box {

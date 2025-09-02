@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HiMenuAlt3 } from "react-icons/hi";
 import { Link } from "react-router-dom"; // Only if using react-router
 
 export default function Navbar() {
@@ -46,10 +47,10 @@ export default function Navbar() {
         <div className="md:hidden sm:hidden">
           <button
             aria-label="menu"
-            className="p-2 border rounded-md border-white/10"
+            className="p-3 border rounded-md border-white/10"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            ☰
+            <HiMenuAlt3  size={25}/>
           </button>
         </div>
       </div>
